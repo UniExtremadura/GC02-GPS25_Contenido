@@ -14,6 +14,7 @@ io\swagger\services\ElementoService.class
 io\swagger\api\CancionesApi.class
 io\swagger\configuration\LocalDateConverter.class
 io\swagger\Swagger2SpringBoot$ExitException.class
+io\swagger\model\ElementoPut.class
 io\swagger\configuration\CustomInstantDeserializer$9.class
 io\swagger\services\GeneroService.class
 io\swagger\model\ElementoInput.class
