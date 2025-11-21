@@ -1,5 +1,4 @@
 io\swagger\entity\ElementoEntity.class
-io\swagger\configuration\HomeController.class
 io\swagger\api\ContenidosApi.class
 io\swagger\configuration\JacksonConfiguration.class
 io\swagger\api\ApiResponseMessage.class
