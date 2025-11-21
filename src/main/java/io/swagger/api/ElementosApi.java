@@ -7,6 +7,7 @@ package io.swagger.api;
 
 import io.swagger.model.Elemento;
 import io.swagger.model.ElementoInput;
+import io.swagger.model.ElementoPut;
 import io.swagger.model.ErrorResponse;
 import org.threeten.bp.LocalDate;
 import io.swagger.v3.oas.annotations.Operation;
@@ -22,18 +23,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.bind.annotation.CookieValue;
-
 import javax.validation.Valid;
-import javax.validation.constraints.*;
 import java.util.List;
-import java.util.Map;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-11-10T17:11:09.236506587Z[GMT]")
 @Validated
@@ -110,7 +104,7 @@ public interface ElementosApi {
     @Operation(summary = "Actualizar un contenido existente", description = "Modifica los datos de un contenido. El ID se toma del cuerpo de la petición.", security = {
         @SecurityRequirement(name = "bearerAuth")    }, tags={ "Elementos" })
     @ApiResponses(value = { 
-        @ApiResponse(responseCode = "200", description = "Contenido actualizado correctamente.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ElementoInput.class))),
+        @ApiResponse(responseCode = "200", description = "Contenido actualizado correctamente.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Elemento.class))),
         
         @ApiResponse(responseCode = "400", description = "Datos inválidos o ID no especificado.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponse.class))),
         
@@ -121,7 +115,7 @@ public interface ElementosApi {
         produces = { "application/json" }, 
         consumes = { "application/json" }, 
         method = RequestMethod.PUT)
-    ResponseEntity<ElementoInput> elementosPut(@Parameter(in = ParameterIn.DEFAULT, description = "", required=true, schema=@Schema()) @Valid @RequestBody ElementoInput body
+    ResponseEntity<Elemento> elementosPut(@Parameter(in = ParameterIn.DEFAULT, description = "", required=true, schema=@Schema()) @Valid @RequestBody ElementoPut body
 );
 
 }
