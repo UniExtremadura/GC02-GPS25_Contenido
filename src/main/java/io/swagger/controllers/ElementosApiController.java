@@ -121,8 +121,8 @@ public class ElementosApiController implements ElementosApi {
     // DELETE /elementos/{id}
     @Override
     public ResponseEntity<Void> elementosIdDelete(@Parameter(in = ParameterIn.PATH, description = "ID del contenido que se desea eliminar", required=true, schema=@Schema()) @PathVariable("id") Integer id) {
-        //TODO
-        return null;
+        elementoService.delete(id);
+        return ResponseEntity.noContent().build();
 
     }
 
