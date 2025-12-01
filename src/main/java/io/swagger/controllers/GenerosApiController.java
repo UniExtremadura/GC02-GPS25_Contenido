@@ -87,7 +87,7 @@ public class GenerosApiController implements GenerosApi {
 
             var actualizado = generoService.updateGenero(idGenero, existente);
 
-            //Convertimos a modelo Swagger
+            // 🔹 Convertimos a modelo Swagger
             Genero genero = new Genero();
             genero.setId(actualizado.getId());
             genero.setNombre(actualizado.getNombre());
@@ -100,6 +100,7 @@ public class GenerosApiController implements GenerosApi {
     }
 
     // POST /generos
+    @Override
     public ResponseEntity<Genero> generosPost(@Parameter(in = ParameterIn.DEFAULT, description = "", required=true, schema=@Schema()) @Valid @RequestBody Genero body) {
         GeneroEntity entity = new GeneroEntity();
         entity.setNombre(body.getNombre());
