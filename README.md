@@ -1,5 +1,5 @@
 # GC02-GPS25_Contenido
-# 📖 Microservicio de Gestión de Contenidos - UnderSounds    
+# 📖 Microservicio de Gestión de Contenidos - UnderSounds 
 
 Bienvenido al repositorio del microservicio encargado de la gestión de contenidos (textos, imágenes, metadatos, etc.) para la página web **UnderSounds**.
 
